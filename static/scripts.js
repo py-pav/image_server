@@ -44,7 +44,7 @@ function handleSubmit(event, files) {
             errorDiv.innerHTML = '<p style="color: red; font-weight: bold;">Upload failed: ' + data.error + '</p>';
             linkInput.value = '';
         } else {
-            errorDiv.innerHTML = '<p style="color: green; font-weight: bold;">Successful download</p>';
+            errorDiv.innerHTML = '<p style="color: green; font-weight: bold;">Successful download: ' + data.filename + '</p>';
             linkInput.value = data.host + data.url;
         }
     })

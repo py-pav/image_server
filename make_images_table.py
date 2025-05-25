@@ -28,6 +28,7 @@ DOWNLOAD_PAGE_HEADER = f'''
     <meta charset="UTF-8">
     <title>Uploaded Images</title>
     {SCRIPT_FOR_DELETE}
+    <link rel="icon" href="/static/pictures/favicon.ico" type="image/x-icon">
     <link href="/static/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="upload-body">

@@ -145,7 +145,7 @@ class ImageServer(BaseHTTPRequestHandler):
                     'message': 'File uploaded successfully',
                     'filename': filename,
                     'url': f"/images/{filename}",
-                    'host': self.headers['Host'],
+                    'host': self.headers.get('X-Forwarded-Host', self.headers['Host']),
                 }
                 self.wfile.write(json.dumps(response).encode('utf-8'))
 
@@ -194,6 +194,7 @@ class ImageServer(BaseHTTPRequestHandler):
             html = DOWNLOAD_PAGE_HEADER
             if not files:
                 html += '<p style="color: red; font-weight: bold;">FILES ARE MISSING</p>'
+                logging.info('Отсутствуют загруженные изображения')
             else:
                 html += ('<table class="custom-table" id="resizableTable"><thead>'
                          '<tr><th>Name</th><th>Url</th><th>Delete</th></tr></thead><tbody>')

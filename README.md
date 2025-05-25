@@ -27,9 +27,9 @@
    ├── Dockerfile            # Dockerfile для Python-бэкенда
    ├── docker-compose.yml    # Конфигурация Docker Compose
    ├── nginx.conf            # Конфигурация Nginx
-   ├── images/               # Папка для хранения загруженных изображений (volume)
-   ├── logs/                 # Папка для логов (volume)
-   └── static/               # Дополнительные статические файлы (CSS/JS)
+   ├── images/               # Папка для хранения загруженных изображений
+   ├── logs/                 # Папка для логов
+   └── static/               # Дополнительные статические файлы (HTML/CSS/JS)
 
 ---
 
@@ -43,6 +43,7 @@
 4. Запустите проект с помощью Docker Compose.
    ```bash
    docker compose up --build -d
+5. Сервис будет доступен по адресу [http://localhost:8000/](http://localhost:8000/)
    
 ---
 
@@ -79,5 +80,5 @@
 ---
 
 ### Контактная информация
- - [Telegram](@py_pav): @py_pav
- - [Email](sintez-kr85@mail.ru): sintez-kr85@mail.ru
+ - [Telegram](https://t.me/py_pav): @py_pav
+ - Email: sintez-kr85@mail.ru
